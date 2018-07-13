@@ -27,10 +27,10 @@ Navigate to `localhost:3000`
 
 Before you can log in, you'll need to register a new administrator account. To do this, deactivate the security surrounding registration by _BRIEFLY_ commenting out the `componentDidUpdate` function in `src/components/RegisterPage/RegisterPage.js` and saving it, as well as _briefly_ removing the `rejectNonAdmins` middleware from the router.post to '/register' in `server/routes/user.router.js`.
 
-Once you do this, go to `localhost:3000/#/register` and register a new administrator account, then go back to the project and reimplement the security to disallow registration. This will only register a partner account. To complete the administrator account creation process, connect to the database using Postico (or any your favorite database management tool) and go to the user table, find the user name you chose, and under the `role` field, change your role to `admin`. Once this is complete, the admin account is complete and you may log in.
+Once you do this, go to `localhost:3000/#/register` and register a new administrator account, then go back to the project and re-implement the security to disallow registration. This will only register a partner account. To complete the administrator account creation process, connect to the database using Postico (or any your favorite database management tool) and go to the user table, find the user name you chose, and under the `role` field, change your role to `admin`. Once this is complete, the admin account is complete and you may log in.
 
 ## Deployment
-To deply a production version, run the command `npm run build` in the project folder, then deploy it to the website you would like to host it on.
+To deploy a production version, run the command `npm run build` in the project folder, then deploy it to the website you would like to host it on.
 
 When it is on the web server, if `npm start` is not automatically started (such as it is on hosts like Heroku), run it.
 
